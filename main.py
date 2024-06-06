@@ -66,7 +66,7 @@ if video is not None:
                 out.write(annotated_frame.squeeze().astype(np.uint8))
             cap.release()
             out.release()
-            cv2.destroyAllWindows()
+            
     
         st.video(output_video_filename)
         st.subheader("Click the play button in the detected video!")
