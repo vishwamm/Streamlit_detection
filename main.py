@@ -48,9 +48,9 @@ if video is not None:
         with open(save2_path, "wb") as f:
             f.write(video.getbuffer())
 
-        frames=[]
+
         video_path="uploaded_videos/"+videoname
-        output_video_filename = "annotated_video.mp4"
+        output_video_filename = f"annotated_{videoname}.mp4"
         with st.spinner("Detection in process..."):
             cap = cv2.VideoCapture(video_path)
             fourcc = cv2.VideoWriter_fourcc(*'WebM')  # Adjust codec based on your needs
